@@ -1,0 +1,95 @@
+    curl -X POST -H "Content-Type: application/json" -d '{
+      "setting_type":"call_to_actions",
+      "thread_state":"new_thread",
+      "call_to_actions":[
+        {
+          "payload":"USER_DEFINED_PAYLOAD"
+        }
+      ]
+    }' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAEL1WUHT3QBAKzrCPLym8Y28foozzzam1u3hn9rrMad5uATK2N01Bcp5y7wh2vHaRhUvAjxlfj3lD9G4VN98ZBeFKLoUkp7nNHZCnmm7C866pOi2uqTykbSiUs8y720mSoMhNs4mqyiZBsUz45It3HcbFZBd1niqhiN2YgkVQZDZD"
+
+
+
+curl -X POST -H "Content-Type: application/json" -d '{
+"persistent_menu":[
+    {
+    "locale":"default",
+    "composer_input_disabled":true,
+    "call_to_actions":[
+        {
+        "title":"Estado de Enlaces inalambricos",
+        "type":"nested",
+        "call_to_actions":[
+            {
+            "title":"Popayan-Munchique",
+            "type":"postback",
+            "payload":"E-Popayan"
+            },
+            {
+            "title":"Munchique-Plateado",
+            "type":"postback",
+            "payload":"E-Plateado"
+            },
+            {
+            "title":"Munchique-Joli",
+            "type":"postback",
+            "payload":"E-Joli"
+            },
+            {
+            "title":"Munchique-Timbiqui",
+            "type":"postback",
+            "payload":"E-Timbiqui"
+            },
+            {
+            "title":"Munchique-Cupi",
+            "type":"postback",
+            "payload":"E-Cupi"
+            }
+        ]
+        },
+        {
+        "title":"Estado hotspots",
+        "type":"nested",
+        "call_to_actions":[
+            {
+            "title":"Plateado",
+            "type":"postback",
+            "payload":"H-Plateado"
+            },
+            {
+            "title":"San-Juan",
+            "type":"postback",
+            "payload":"H-Juan"
+            },
+            {
+            "title":"Recogedero",
+            "type":"postback",
+            "payload":"H-Recogedero"
+            },
+            {
+            "title":"Saija",
+            "type":"postback",
+            "payload":"H-Saija"
+            }
+        ]
+        },
+        {
+        "type":"web_url",
+        "title":"Visita nuestra página web",
+        "url":"https://Araucahosting.com/",
+        "webview_height_ratio":"full"
+        }
+    ]
+    },
+    {
+    "locale":"zh_CN",
+    "composer_input_disabled":false
+    }
+]
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAEL1WUHT3QBAKzrCPLym8Y28foozzzam1u3hn9rrMad5uATK2N01Bcp5y7wh2vHaRhUvAjxlfj3lD9G4VN98ZBeFKLoUkp7nNHZCnmm7C866pOi2uqTykbSiUs8y720mSoMhNs4mqyiZBsUz45It3HcbFZBd1niqhiN2YgkVQZDZD"
+
+curl -X DELETE -H "Content-Type: application/json" -d '{
+"fields":[
+    "persistent_menu"
+]
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAEL1WUHT3QBAKzrCPLym8Y28foozzzam1u3hn9rrMad5uATK2N01Bcp5y7wh2vHaRhUvAjxlfj3lD9G4VN98ZBeFKLoUkp7nNHZCnmm7C866pOi2uqTykbSiUs8y720mSoMhNs4mqyiZBsUz45It3HcbFZBd1niqhiN2YgkVQZDZD" 
